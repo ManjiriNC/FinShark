@@ -7,6 +7,7 @@ using api.Dtos.Stock;
 using api.Helpers;
 using api.Interfaces;
 using api.MAppers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -24,6 +25,7 @@ namespace api.Controllers
         }
         
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
         {
             if(!ModelState.IsValid)
@@ -31,9 +33,9 @@ namespace api.Controllers
 
             var stock= await _repo.GetAllAsync(query);
 
-            var stockDto = stock.Select(s => s.ToStockDto());
+            var stockDto = stock.Select(s => s.ToStockDto()).ToList();
 
-            return Ok(stock);
+            return Ok(stockDto);
         }
 
         [HttpGet("{id:int}")]

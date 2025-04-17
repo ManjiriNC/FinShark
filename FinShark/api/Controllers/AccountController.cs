@@ -7,6 +7,7 @@ using api.Interfaces;
 using api.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
@@ -14,12 +15,44 @@ namespace api.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<AppUser> _userMannager;
+        private readonly UserManager<AppUser> _userManager;
         private readonly ITokenService _tokenservice;
-        public AccountController(UserManager<AppUser> userMannager, ITokenService tokenservice)
+        private readonly SignInManager<AppUser> _signinManager;
+        
+        public AccountController(UserManager<AppUser> userManager, ITokenService tokenservice,SignInManager<AppUser> signinManager)
         {
-            _userMannager = userMannager;
+            _userManager = userManager;
+            _signinManager = signinManager;
             _tokenservice = tokenservice;
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDto loginDto)
+        {
+            if(!ModelState.IsValid)
+               return BadRequest(ModelState);
+
+            if (string.IsNullOrWhiteSpace(loginDto.Username) || string.IsNullOrWhiteSpace(loginDto.Password))
+               return BadRequest("Username and Password are required."); 
+
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
+
+            if(user == null) 
+                return Unauthorized("Invalid Username!");
+            
+            var result = await _signinManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+            if(!result.Succeeded)
+              return Unauthorized("Username not Found or Password is incorrect");
+
+            return Ok(
+                new NewUserDto
+                {
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    Token = _tokenservice.CreateToken(user)
+                }
+            );
         }
 
         [HttpPost("register")]
@@ -35,11 +68,11 @@ namespace api.Controllers
                     Email = registerDto.Email
                 };
 
-                var createdUser = await _userMannager.CreateAsync(appUser, registerDto.Password);
+                var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
 
                 if(createdUser.Succeeded)
                 {
-                    var roleResult = await _userMannager.AddToRoleAsync(appUser, "User");
+                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
                     if(roleResult.Succeeded)
                     {
                         return Ok(

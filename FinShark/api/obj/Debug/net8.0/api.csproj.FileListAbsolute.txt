@@ -8,6 +8,10 @@ D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\api.
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Azure.Core.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Azure.Identity.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Humanizer.dll
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -33,6 +37,8 @@ D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Micr
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -121,6 +127,7 @@ D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.csproj.CoreCompileInputs.cache
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.MvcApplicationPartsAssemblyInfo.cs
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.MvcApplicationPartsAssemblyInfo.cache
+D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.sourcelink.json
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\staticwebassets.build.json
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\staticwebassets.development.json
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\staticwebassets\msbuild.api.Microsoft.AspNetCore.StaticWebAssets.props
@@ -135,9 +142,3 @@ D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\refi
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.pdb
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\api.genruntimeconfig.cache
 D:\Company Project\.NetCore_Project_paractice\FinShark\api\obj\Debug\net8.0\ref\api.dll
-D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
-D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
-D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Company Project\.NetCore_Project_paractice\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

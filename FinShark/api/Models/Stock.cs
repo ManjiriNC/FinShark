@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
+    [Table("Stocks")]
     public class Stock
     {
         public int Id { get; set; }
@@ -25,5 +26,6 @@ namespace api.Models
         
         public List<Comment> Comments { get; set; } = new List<Comment>();
  
+        public ICollection<Portfolio> Portfolios { get; set; }
     }
 }
